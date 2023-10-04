@@ -4,13 +4,36 @@ module.exports = {
     toField: '#to',
     phoneNumberField: '#phone',
     codeField: '#code',
+    cardNumber: '#number',
+    cardCode: '.card-code #code',
+    messageToDriver: '#comment',
+    ordering2icecreams:'div=+',
     // Buttons
     callATaxiButton: 'button=Call a taxi',
-    phoneNumberButton: '//div[starts-with(text(), "Phone number")]',
+    phoneNumberButton: '.np-text',
     nextButton: 'button=Next',
     confirmButton: 'button=Confirm',
+    selectsupportive: 'div=Supportive', 
+    paymentmethodbutton: '.pp-text',
+    addCardButton:'div=Add card',
+    linkButton: 'button=Link',
+    thedriverwillarrive :'.order-subbody',
+    //orderRequirements: '.reqs-head',
+    //arrowbutton: '.reqs-arrow',  
+    blanketandhandkerchiefs: '//div[contains(text(),"Blanket and handkerchiefs")]/following-sibling::div',
+    blanketButtonStatus: '.switch-input',
+    Enterthenumeberandorder:'.smart-button-main',
     // Modals
     phoneNumberModal: '.modal',
+    closePaymentMethodModel: '.payment-picker .close-button',
+    closePhoneNumberModal: '.close-button', 
+ 
+    // Misc
+     
+    cardSignatureStrip: '.plc',
+    carsearchmodelwindow:'.order-buttons',
+    driverWillArriveModal: 'div*=The driver will arrive',
+
     // Functions
     fillAddresses: async function(from, to) {
         const fromField = await $(this.fromField);
@@ -21,6 +44,11 @@ module.exports = {
         await callATaxiButton.waitForDisplayed();
         await callATaxiButton.click();
     },
+   /* //Selectmode: 
+    Selectmode: const Supportive = await $(this.Supportive);
+        await Supportive.waitForDisplayed();
+        await Supportive.click()*/
+
     fillPhoneNumber: async function(phoneNumber) {
         const phoneNumberButton = await $(this.phoneNumberButton);
         await phoneNumberButton.waitForDisplayed();
