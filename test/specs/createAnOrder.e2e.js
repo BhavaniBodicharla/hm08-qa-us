@@ -43,7 +43,7 @@ describe('Create an order', () => {
        const phoneNumberButton = await $(page.phoneNumberButton);
        await phoneNumberButton.waitForDisplayed();
        await phoneNumberButton.click();
-       const pnoneNumberModal = await $(page.phoneNumberModal);
+       //const pnoneNumberModal = await $(page.phoneNumberModal);
 
        const closePhoneNumberModal = await $(page.closePhoneNumberModal);
        await closePhoneNumberModal.waitForDisplayed();
