@@ -2,21 +2,13 @@ const page = require('../../page');
 const helper = require('../../helper')
 
 describe('Create an order', () => {
-   /*it('should open phone number modal', async () => {
-        await browser.url(`/`)
-        await page.fillAddresses('East 2nd Street, 601', '1300 1st St');
-        const phoneNumberButton = await $(page.phoneNumberButton);
-        await phoneNumberButton.waitForDisplayed();
-        await phoneNumberButton.click();
-        const pnoneNumberModal = await $(page.phoneNumberModal);
-        await expect(pnoneNumberModal).toBeExisting();
-    })*/
-
-     it('should wait for the taxi driver', async () => {
+   it('should wait for the taxi driver', async () => {
        // call the taxi to the adress
         await browser.url(`/`)
         await page.fillAddresses('East 2nd Street, 601', '1300 1st St');
+       
     })
+
         // 2.select supportive mode
         it('should select supportive mode', async () => {
         await browser.url(`/`)
@@ -24,11 +16,9 @@ describe('Create an order', () => {
         const selectsupportive = await $(page.selectsupportive);
         await selectsupportive.waitForDisplayed();
         await selectsupportive.click();
-      //  await browser.pause(20000);
+     
         await expect(selectsupportive.parentElement()).toHaveElementClass("active");
     })
-
-
 
       //3. Input phone number
        
@@ -43,7 +33,7 @@ describe('Create an order', () => {
        const phoneNumberButton = await $(page.phoneNumberButton);
        await phoneNumberButton.waitForDisplayed();
        await phoneNumberButton.click();
-       //const pnoneNumberModal = await $(page.phoneNumberModal);
+      
 
        const closePhoneNumberModal = await $(page.closePhoneNumberModal);
        await closePhoneNumberModal.waitForDisplayed();
@@ -84,7 +74,7 @@ describe('Create an order', () => {
         await expect(closePaymentMethodModel).toBeExisting();    
     })
 
-        //await browser.pause(5000);
+        
         
 
         // 5.Message to Driver
@@ -97,14 +87,7 @@ describe('Create an order', () => {
         await expect(messageToDriver).toHaveValue("Get some water");
     })
         
-       //await browser.pause(5000);
-       // const orderRequirements = await $(page.orderRequirements);
-        //await orderRequirements.waitForDisplayed();
-       // await orderRequirements.click();
-        
-       // const arrowbutton = await $(page.arrowbutton);
-        //await arrowbutton.waitForDisplayed();
-       // await arrowbutton.click();
+      
         
       // 6.blanketandhandkerchiefs
        it('Button should be active', async () => {
@@ -118,7 +101,7 @@ describe('Create an order', () => {
         await blanketandhandkerchiefs.waitForDisplayed();
         await blanketandhandkerchiefs.click();
         await expect($(page.blanketButtonStatus)).toBeChecked();
-        // await expect(blanketandhandkerchiefs).toBeChecked();
+       
     })
 
         // 7.ordering 2 icecreams
@@ -222,17 +205,10 @@ describe('Create an order', () => {
         await thedriverwillarrive.waitForDisplayed();
         await browser.pause(20000); 
         await expect($(`${page.driverWillArriveModal}`)).toBeExisting();
-      //  await thedriverwillarrive.click(); 
-       // await expect(thedriverwillarrive).toBeExisting();
-        
-        //await browser.pause(5000); 
+      
        })
 
 
-
-
-
-   
     })
 
 

@@ -5,4 +5,4 @@ Project Description: The project involves automated test cases written in Mocha 
 
 Technologies used: Mocha
 
-To run test cases: To run the test cases use the command  'npm run wdio'
+How To run test project: To run the test cases use the command  'npm run wdio'
